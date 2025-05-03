@@ -11,16 +11,21 @@ const ProductDisplay = ({ category }) => {
       <h2>Top Products</h2>
       <div className="product-display-list">
         {food_list.map((item, index) => {
-          return (
-            <ProductItem
-              key={index}
-              id={item._id}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              image={item.image}
-            />
-          );
+          {
+            console.log(category, item.category);
+          }
+          if (category === "All" || category === item.category) {
+            return (
+              <ProductItem
+                key={index}
+                id={item._id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            );
+          }
         })}
       </div>
     </div>

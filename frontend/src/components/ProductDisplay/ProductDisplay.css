@@ -5,6 +5,7 @@
 .product-display h2 {
   font-size: max(2vw, 24px);
   font-weight: 600;
+  color: #066148;
 }
 
 .product-display-list {
